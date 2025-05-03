@@ -2,175 +2,45 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <title>CONNECT.N DB 가격표 & 견적 계산기</title>
+  <title>CONNECT.N - 간편 견적 계산기</title>
 
-  <!-- Tailwind CSS CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css"
-  />
+  <!-- Tailwind CDN(스타일용, 선택) -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css"/>
 </head>
 
-<body class="bg-gray-50 text-sm">
+<body class="bg-gray-50 text-sm leading-relaxed flex items-center min-h-screen">
 
-  <!-- ▼ 가격표 ▼ -->
-  <section class="max-w-screen-xl mx-auto p-4 bg-white shadow rounded">
-    <h2 class="text-2xl font-bold mb-4">CONNECT.N DB 상품 가격 비교</h2>
+  <!-- ── 계산기 ───────────────────────────────────── -->
+  <section class="max-w-screen-sm mx-auto p-6 bg-white shadow rounded w-full">
+    <h1 class="text-2xl font-bold mb-4 text-center">💸 간편 견적 계산기</h1>
 
-    <div class="overflow-x-auto">
-      <table class="min-w-full border border-gray-300">
-        <thead class="bg-gray-100 text-center">
-          <tr>
-            <th class="px-2 py-1 border">구분</th>
-            <th class="px-2 py-1 border">세부 등급</th>
-            <th class="px-2 py-1 border">홈페이지<br>판매가</th>
-            <th class="px-2 py-1 border">3–5월<br>최저가(+3k)</th>
-            <th class="px-2 py-1 border">6월 이후<br>최저가(+5k)</th>
-            <th class="px-2 py-1 border">영업사원<br>특별가</th>
-          </tr>
-        </thead>
-        <tbody class="text-right">
-
-          <!-- 보험료 절감 -->
-          <tr><td class="border px-2 py-1 text-left" rowspan="7">보험료 절감</td>
-              <td class="border px-2 py-1 text-left">BASIC (이든넷)</td>
-              <td class="border px-2 py-1">88,000</td>
-              <td class="border px-2 py-1">85,000</td>
-              <td class="border px-2 py-1">88,000</td>
-              <td class="border px-2 py-1">–</td></tr>
-          <tr><td class="border px-2 py-1 text-left">140 % BASIC</td>
-              <td class="border">–</td><td class="border">115,000</td>
-              <td class="border">120,000</td><td class="border">–</td></tr>
-          <tr><td class="border px-2 py-1 text-left">PREMIUM</td>
-              <td class="border">88,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr><td class="border px-2 py-1 text-left">PREMIUM 140 %</td>
-              <td class="border">118,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr><td class="border px-2 py-1 text-left">PREMIUM+</td>
-              <td class="border">105,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr><td class="border px-2 py-1 text-left">PREMIUM+ 140 %</td>
-              <td class="border">141,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr><td class="border px-2 py-1 text-left">MAX</td>
-              <td class="border">110,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">148,500</td></tr>
-
-          <!-- 실버 -->
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left" rowspan="8">실버</td>
-              <td class="border px-2 py-1 text-left">BASIC (이든넷)</td>
-              <td class="border">70,000</td><td class="border">63,000</td>
-              <td class="border">66,000</td><td class="border">–</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">140 % BASIC</td>
-              <td class="border">–</td><td class="border">85,000</td>
-              <td class="border">90,000</td><td class="border">–</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">PREMIUM</td>
-              <td class="border">70,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">PREMIUM 140 %</td>
-              <td class="border">94,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">PREMIUM+</td>
-              <td class="border">85,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">PREMIUM+ 140 %</td>
-              <td class="border">114,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">MAX</td>
-              <td class="border">88,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">118,000</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">방문픽스 실버 140 %</td>
-              <td class="border">141,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-
-          <!-- 방문픽스 -->
-          <tr><td class="border px-2 py-1 text-left" rowspan="2">방문픽스</td>
-              <td class="border px-2 py-1 text-left">PREMIUM</td>
-              <td class="border">132,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr><td class="border px-2 py-1 text-left">PREMIUM 140 %</td>
-              <td class="border">178,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-
-          <!-- 건강검진 -->
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left" rowspan="4">건강검진</td>
-              <td class="border px-2 py-1 text-left">BASIC</td>
-              <td class="border">44,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">33,000</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">PREMIUM</td>
-              <td class="border">66,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">59,000</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">PREMIUM 140 %</td>
-              <td class="border">89,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">79,000</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">PLATINUM</td>
-              <td class="border">132,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-
-          <!-- 가계부 -->
-          <tr><td class="border px-2 py-1 text-left" rowspan="4">가계부</td>
-              <td class="border px-2 py-1 text-left">BASIC</td>
-              <td class="border">40,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr><td class="border px-2 py-1 text-left">PREMIUM</td>
-              <td class="border">70,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">63,000</td></tr>
-          <tr><td class="border px-2 py-1 text-left">PREMIUM 140 %</td>
-              <td class="border">–</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">85,000</td></tr>
-          <tr><td class="border px-2 py-1 text-left">PLATINUM</td>
-              <td class="border">55,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">49,000</td></tr>
-
-          <!-- 대장암 -->
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left" rowspan="2">대장암 키트</td>
-              <td class="border px-2 py-1 text-left">PREMIUM</td>
-              <td class="border">77,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-          <tr class="bg-gray-50"><td class="border px-2 py-1 text-left">PREMIUM 140 %</td>
-              <td class="border">104,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td></tr>
-
-          <!-- 법인 / 리쿠르팅 -->
-          <tr><td class="border px-2 py-1 text-left">법인 BASIC</td>
-              <td class="border">55,000</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td><td class="border">–</td></tr>
-          <tr><td class="border px-2 py-1 text-left">리쿠르팅 (미진행)</td>
-              <td class="border">–</td><td class="border">–</td>
-              <td class="border">–</td><td class="border">–</td><td class="border">–</td></tr>
-        </tbody>
-      </table>
+    <div class="flex flex-col sm:flex-row gap-3 mb-4">
+      <input id="unit" class="flex-1 p-2 border rounded"
+             type="number" placeholder="원가(₩)">
+      <input id="disc" class="flex-1 p-2 border rounded"
+             type="number" placeholder="할인가(₩)">
+      <input id="qty"  class="flex-1 p-2 border rounded"
+             type="number" placeholder="수량">
     </div>
-  </section>
-  <!-- ▲ 가격표 ▲ -->
 
-  <!-- ▼ 실시간 견적 계산기 ▼ -->
-  <section class="max-w-screen-md mx-auto mt-8 p-4 bg-white shadow rounded">
-    <h3 class="text-xl font-semibold mb-3">간편 견적 계산기</h3>
-    <div class="flex gap-2 mb-3">
-      <input id="unit" class="w-1/3 p-2 border rounded" type="number" placeholder="원가(₩)">
-      <input id="disc" class="w-1/3 p-2 border rounded" type="number" placeholder="할인가(₩)">
-      <input id="qty"  class="w-1/3 p-2 border rounded" type="number" placeholder="수량">
-    </div>
-    <pre id="result" class="bg-gray-100 p-3 rounded whitespace-pre-line"></pre>
+    <pre id="result" class="bg-gray-100 p-4 rounded whitespace-pre-line text-base"></pre>
   </section>
-  <!-- ▲ 실시간 견적 계산기 ▲ -->
+  <!-- ────────────────────────────────────────────── -->
 
-  <!-- 계산기 스크립트 -->
   <script>
     const $ = id => document.getElementById(id);
-    ['unit', 'disc', 'qty'].forEach(id =>
+    ['unit','disc','qty'].forEach(id =>
       $(id).addEventListener('input', () => {
-        const u = +$('unit').value || 0;
-        const d = +$('disc').value || 0;
-        const q = +$('qty').value  || 0;
-        if (!u || !d || !q) { $('result').textContent = ''; return; }
+        const u = +$('unit').value || 0,
+              d = +$('disc').value || 0,
+              q = +$('qty').value  || 0;
+        if (!u || !d || !q) { $('result').textContent=''; return; }
 
-        const ori  = u * q;
-        const dis  = d * q;
-        const save = ori - dis;
-        const rate = ((u - d) / u * 100).toFixed(2);
+        const ori  = u*q,
+              dis  = d*q,
+              save = ori - dis,
+              rate = ((u-d)/u*100).toFixed(2);
 
         $('result').textContent =
 `💰 원래 합계 : ${ori.toLocaleString()}원
@@ -179,6 +49,5 @@
       })
     );
   </script>
-
 </body>
 </html>
