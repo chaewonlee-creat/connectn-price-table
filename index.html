@@ -4,29 +4,54 @@
   <meta charset="utf-8" />
   <title>CONNECT.N - 간편 견적 계산기</title>
 
-  <!-- Tailwind CDN(스타일용, 선택) -->
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css"/>
+  <!-- Tailwind CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css"/>
 </head>
-
 <body class="bg-gray-50 text-sm leading-relaxed flex items-center min-h-screen">
 
-  <!-- ── 계산기 ───────────────────────────────────── -->
+  <!-- ── 💰 가격표 ─────────────────────────────── -->
+  <section id="priceTable" class="max-w-screen-sm mx-auto p-6 mb-6 bg-white shadow rounded w-full">
+    <h2 class="text-xl font-bold mb-4 text-center">📋 제품 가격표</h2>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-center border">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="p-2 border">제품</th>
+            <th class="p-2 border">할인 전 (₩)</th>
+            <th class="p-2 border">할인 후 (₩)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border p-2">보험료절감&nbsp;프리미엄</td><td class="border">88,000</td><td class="border">85,000</td></tr>
+          <tr><td class="border p-2">보험료절감&nbsp;140%</td><td class="border">118,000</td><td class="border">115,000</td></tr>
+          <tr><td class="border p-2">실버&nbsp;프리미엄</td><td class="border">70,000</td><td class="border">63,000</td></tr>
+          <tr><td class="border p-2">실버&nbsp;프리미엄&nbsp;140%</td><td class="border">94,000</td><td class="border">85,000</td></tr>
+          <tr><td class="border p-2">건강검진&nbsp;BASIC</td><td class="border">44,000</td><td class="border">33,000</td></tr>
+          <tr><td class="border p-2">건강검진&nbsp;PREMIUM</td><td class="border">66,000</td><td class="border">59,000</td></tr>
+          <tr><td class="border p-2">건강검진&nbsp;140%</td><td class="border">89,000</td><td class="border">79,000</td></tr>
+          <tr><td class="border p-2">가계부&nbsp;PREMIUM</td><td class="border">70,000</td><td class="border">63,000</td></tr>
+          <tr><td class="border p-2">가계부&nbsp;PREMIUM&nbsp;140%</td><td class="border">94,000</td><td class="border">85,000</td></tr>
+          <tr><td class="border p-2">가계부&nbsp;PLATINUM</td><td class="border">55,000</td><td class="border">49,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- ─────────────────────────────────────────── -->
+
+  <!-- ── ✏️ 계산기 ─────────────────────────────── -->
   <section class="max-w-screen-sm mx-auto p-6 bg-white shadow rounded w-full">
     <h1 class="text-2xl font-bold mb-4 text-center">💸 간편 견적 계산기</h1>
 
     <div class="flex flex-col sm:flex-row gap-3 mb-4">
-      <input id="unit" class="flex-1 p-2 border rounded"
-             type="number" placeholder="원가(₩)">
-      <input id="disc" class="flex-1 p-2 border rounded"
-             type="number" placeholder="할인가(₩)">
-      <input id="qty"  class="flex-1 p-2 border rounded"
-             type="number" placeholder="수량">
+      <input id="unit" class="flex-1 p-2 border rounded" type="number" placeholder="원가(₩)">
+      <input id="disc" class="flex-1 p-2 border rounded" type="number" placeholder="할인가(₩)">
+      <input id="qty"  class="flex-1 p-2 border rounded" type="number" placeholder="수량">
     </div>
 
     <pre id="result" class="bg-gray-100 p-4 rounded whitespace-pre-line text-base"></pre>
   </section>
-  <!-- ────────────────────────────────────────────── -->
+  <!-- ─────────────────────────────────────────── -->
 
   <script>
     const $ = id => document.getElementById(id);
